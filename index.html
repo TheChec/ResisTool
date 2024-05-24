@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css" type="text/css">
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="icon" href="./assets/resistence_logo.png">
+    <title>ResisTool</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="Logo">
+            <img src="./assets/resistence_logo.png" alt="">
+        </div>
+        <h1>ResisTool</h1>
+        <div></div>
+    </div>
+    <main>
+        <div class="navBarMain">
+            <h2 id="btnRest">Calculadora de resistencias</h2>
+            <h2 id="btnCap">Calculadora de capacitores</h2>
+        </div>
+
+        <div id="sliderCalcRest">
+            <div class="importantInfo">
+                <h2>¿Cómo funciona?</h2>
+                <p>
+                    Una calculadora de resistencia total es una herramienta útil en electrónica que permite determinar
+                    la resistencia equivalente de múltiples resistencias conectadas en un circuito. Existen dos
+                    configuraciones principales de resistencias: en serie y en paralelo.
+                    <br>
+                    <br>
+                    Con las siguientes formulas:
+                </p>
+                <div class="formul">
+                    <p>Paralelo:</p>
+                    <img src="./assets/paralele.png" alt="">
+                    <p>Serie:</p>
+                    <img src="./assets/serie.png" alt="">
+                </div>
+            </div>
+            <div class="navBar">
+                <button id="btnSerie">En serie</button>
+
+                <button id="btnParalele">Paralelo</button>
+            </div>
+            <div class="Slider">
+                <div class="sliderSerie" id="sliderSerie">
+                    <div class="inputs">
+                        <form class="resistence" id="inputsSerie" action="">
+                            <div>
+                                <label>R1</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                            <div>
+                                <label>R2</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                        </form>
+                        <button id="addInputCircuit">Agregar resistencia</button>
+                    </div>
+                    <div class="result">
+                        <h3>Resultado:</h3>
+                        <p id="resultResistence_paralele">00 </p>
+                        <button>Calcular</button>
+                    </div>
+                    <div class="preview">
+                        <img class="preview_circuit" src="./assets/Circuit_resistence.png" alt="">
+                    </div>
+
+                </div>
+
+                <div class="sliderSerie" id="sliderParalele">
+                    <div class="inputs">
+                        <form class="resistence" id="inputsParalele" action="">
+                            <div>
+                                <label>R1</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                            <div>
+                                <label>R2</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                        </form>
+                        <button id="addInputParalele">Agregar resistencia</button>
+                    </div>
+                    <div class="result">
+                        <h3>Resultado:</h3>
+                        <p id="resultResistence_paralele">00 </p>
+                        <button>Calcular</button>
+                    </div>
+                    <img class="preview_paralele" src="./assets/paralele_resistence.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="sliderCalcCapa">
+            <div class="importantInfo">
+                <h2>¿Cómo funciona?</h2>
+                <p>
+                    Es una herramienta útil en electrónica que permite determinar la capacitancia equivalente de múltiples capacitores conectados en un circuito. Existen dos configuraciones principales de capacitores: en serie y en paralelo.
+                    <br>
+                    <br>
+                    Con las siguientes formulas:
+                </p>
+                <div class="formul">
+                    <p>Paralelo:</p>
+                    <img src="./assets/capacitor_paralele.png" alt="">
+                    <p>Serie:</p>
+                    <img src="./assets/capacitor_serie.png"">
+                </div>
+            </div>
+
+            <div class="navBar">
+                <button id="btnSerieCap">En serie</button>
+
+                <button id="btnParaleleCap">Paralelo</button>
+            </div>
+            <div class="Slider">
+                <div class="sliderSerie" id="sliderSerieCap">
+                    <div class="inputs">
+                        <form class="resistence" id="inputsSerieCap" action="">
+                            <div>
+                                <label>C1</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                            <div>
+                                <label>C2</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                        </form>
+                        <button id="addInputCircuitCap">Agregar capacitor</button>
+                    </div>
+                    <div class="result">
+                        <h3>Resultado:</h3>
+                        <p id="resultResistence_paralele">00 </p>
+                        <button>Calcular</button>
+                    </div>
+                    <div class="preview">
+                        <img class="preview_circuit" src="./assets/capacitor_serie_preview.png" alt="">
+                    </div>
+                </div>
+
+                <div class="sliderSerie" id="sliderParaleleCap">
+                    <div class="inputs">
+                        <form class="resistence" id="inputsParaleleCap" action="">
+                            <div>
+                                <label>C1</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                            <div>
+                                <label>C2</label>
+                                <input type="number" name="" id="" autocomplete="off" required>
+                            </div>
+                        </form>
+                        <button id="addInputParaleleCap">Agregar capacitor</button>
+                    </div>
+                    <div class="result">
+                        <h3>Resultado:</h3>
+                        <p id="resultResistence_paralele">00 </p>
+                        <button>Calcular</button>
+                    </div>
+                    <img class="preview_paralele" src="./assets/paralele_resistence.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="Logo">
+            <img src="./assets/resistence_logo.png" alt="">
+        </div>
+        <div class="Line"></div>
+        <h3>ResisTool <br>
+            Por: Sergio Calderon</h3>
+    </footer>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
