@@ -9,7 +9,6 @@
     <link rel="icon" href="./assets/resistence_logo.png">
     <title>ResisTool</title>
 </head>
-
 <body>
     <div class="header">
         <div class="Logo">
@@ -20,10 +19,9 @@
     </div>
     <main>
         <div class="navBarMain">
-            <h2 id="btnRest">Calculadora de resistencias</h2>
-            <h2 id="btnCap">Calculadora de capacitores</h2>
+            <h3 id="btnRest">Calculadora de resistencias</h3>
+            <h3 id="btnCap">Calculadora de capacitores</h3>
         </div>
-
         <div id="sliderCalcRest">
             <div class="importantInfo">
                 <h2>¿Cómo funciona?</h2>
@@ -41,6 +39,7 @@
                     <p>Serie:</p>
                     <img src="./assets/serie.png" alt="">
                 </div>
+                <p>Agrega los datos en Ω en caso de ser necesario la calculadora hara la conversión a kΩ</p>
             </div>
             <div class="navBar">
                 <button id="btnSerie">En serie</button>
@@ -53,19 +52,19 @@
                         <form class="resistence" id="inputsSerie" action="">
                             <div>
                                 <label>R1</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="Datos en Ω" id="ResistenceSerie" autocomplete="off" required>
                             </div>
                             <div>
                                 <label>R2</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="Datos en Ω" id="ResistenceSerie" autocomplete="off" required>
                             </div>
                         </form>
                         <button id="addInputCircuit">Agregar resistencia</button>
                     </div>
                     <div class="result">
                         <h3>Resultado:</h3>
-                        <p id="resultResistence_paralele">00 </p>
-                        <button>Calcular</button>
+                        <p id="resultResistenceSerie">00 </p>
+                        <button id="btnResistenceSerie">Calcular</button>
                     </div>
                     <div class="preview">
                         <img class="preview_circuit" src="./assets/Circuit_resistence.png" alt="">
@@ -78,19 +77,19 @@
                         <form class="resistence" id="inputsParalele" action="">
                             <div>
                                 <label>R1</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="Datos en μF" id="ResistenceParalele" autocomplete="off" required>
                             </div>
                             <div>
                                 <label>R2</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="Datos en μF" id="ResistenceParalele" autocomplete="off" required>
                             </div>
                         </form>
                         <button id="addInputParalele">Agregar resistencia</button>
                     </div>
                     <div class="result">
                         <h3>Resultado:</h3>
-                        <p id="resultResistence_paralele">00 </p>
-                        <button>Calcular</button>
+                        <p id="resultResistenceParalele">00 </p>
+                        <button id="btnResistenceParalele">Calcular</button>
                     </div>
                     <img class="preview_paralele" src="./assets/paralele_resistence.png" alt="">
                 </div>
@@ -111,6 +110,7 @@
                     <p>Serie:</p>
                     <img src="./assets/capacitor_serie.png"">
                 </div>
+                <p>Agrega los datos en μF en caso de ser necesario la calculadora hara la conversión a mF o F</p>
             </div>
 
             <div class="navBar">
@@ -124,19 +124,19 @@
                         <form class="resistence" id="inputsSerieCap" action="">
                             <div>
                                 <label>C1</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="" id="CapacitorSerie" autocomplete="off" required>
                             </div>
                             <div>
                                 <label>C2</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="" id="CapacitorSerie" autocomplete="off" required>
                             </div>
                         </form>
                         <button id="addInputCircuitCap">Agregar capacitor</button>
                     </div>
                     <div class="result">
                         <h3>Resultado:</h3>
-                        <p id="resultResistence_paralele">00 </p>
-                        <button>Calcular</button>
+                        <p id="resultCapacitorSerie">00 </p>
+                        <button id="btnCapacitorSerie">Calcular</button>
                     </div>
                     <div class="preview">
                         <img class="preview_circuit" src="./assets/capacitor_serie_preview.png" alt="">
@@ -148,26 +148,30 @@
                         <form class="resistence" id="inputsParaleleCap" action="">
                             <div>
                                 <label>C1</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="" id="CapacitorParalele" autocomplete="off" required>
                             </div>
                             <div>
                                 <label>C2</label>
-                                <input type="number" name="" id="" autocomplete="off" required>
+                                <input value="0" type="number" placeholder="" id="CapacitorParalele" autocomplete="off" required>
                             </div>
                         </form>
                         <button id="addInputParaleleCap">Agregar capacitor</button>
                     </div>
                     <div class="result">
                         <h3>Resultado:</h3>
-                        <p id="resultResistence_paralele">00 </p>
-                        <button>Calcular</button>
+                        <p id="resultCapacitorParalele">00 </p>
+                        <button id="btnCapacitorParalele">Calcular</button>
                     </div>
                     <img class="preview_paralele" src="./assets/capacitor_paralele_preview.png" alt="">
                 </div>
             </div>
         </div>
-
     </main>
+    <div id="divAlert" class="divAlert">
+        <div class="alert">
+            <p>Hubo un error, revisa los números ingresados</p>
+        </div>
+    </div>
     <footer>
         <div class="Logo">
             <img src="./assets/resistence_logo.png" alt="">

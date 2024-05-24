@@ -72,6 +72,7 @@ main {
     background-color: var(--c1);
     display: flex;
     overflow: hidden;
+    flex-flow: row wrap;
     box-sizing: border-box;
     padding: 0 20px;
     width: calc(100% + 40px);
@@ -82,11 +83,16 @@ main {
 
 }
 
-.navBarMain h2:nth-child(1) {
+.navBarMain h3:nth-child(1) {
     margin-right: 10px;
 }
 
-.navBarMain h2 {
+.navBarMain h3:nth-child(2) {
+    margin-right: 10px;
+}
+
+.navBarMain h3 {
+    margin: 10px 0;
     padding: 10px 10px;
     border-radius: 15px;
     border: var(--w) 2px solid;
@@ -96,7 +102,7 @@ main {
     transition: background-color .2s ease-in;
 }
 
-.navBarMain h2:hover {
+.navBarMain h3:hover {
     border: var(--w) 2px solid;
     background-color: var(--w);
     color: var(--c1);
@@ -270,6 +276,47 @@ footer {
 #sliderCalcCapa{
     display: none;
 }
+#sliderConver{
+    display: none;
+}
+.alert{
+    height: clamp(20px, 5%, 100px);
+    width:  clamp(60px,60%, 400px);
+    
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    border: var(--c1) 2px solid;
+    background-color: var(--w);
+}
+.divAlert{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: none;
+    justify-content: center;
+
+}
+@keyframes alert {
+    0%{
+        transform: translateY(100%);
+        filter: opacity(0);
+    }
+    50% , 60%{
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+    100%{
+        transform: translateY(100%);
+        filter: opacity(0);
+    }
+}
+
+
+
 @keyframes animate {
     0%{
         transform: translateY(100%);
