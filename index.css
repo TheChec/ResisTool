@@ -64,7 +64,7 @@ main {
     margin: 0 auto;
     border-left: var(--b1) 4px dotted;
     border-right: var(--b1) 4px dotted;
-    padding: 50px 20px;
+    padding: 50px 20px 0 20px;
     overflow: hidden;
 }
 
@@ -135,13 +135,12 @@ main {
 
 .sliderSerie {
     width: 100%;
-    min-height: 200px;
+    min-height: 260px;
     height: fit-content;
     display: flex;
     flex-flow: row wrap;
     overflow: hidden;
     box-sizing: border-box;
-    justify-content: center;
     margin: 20px 0 10px 0;
 }
 
@@ -153,18 +152,22 @@ main {
 
 .inputs {
     width: 320px;
+    height: fit-content;
     overflow: hidden;
     box-sizing: border-box;
+    margin: 0 0 30px 0;
 }
 
 .result {
+    height: fit-content;
     width: 320px;
-
+    margin: 0 0 30px 0;
 }
 
 .preview {
     width: clamp(150px, 20%, 350px);
-
+    margin: 0 0 30px 0;
+    height: fit-content;
 }
 
 .preview_circuit {
@@ -175,6 +178,7 @@ main {
 .preview_paralele {
     width: clamp(150px, 20%, 350px);
     object-fit: contain;
+    height: 180px;
 }
 
 label {
