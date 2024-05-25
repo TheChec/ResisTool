@@ -13,7 +13,7 @@ const divinputsParalele = document.getElementById('inputsParalele');
 add2.addEventListener('click', e => {
     let div = document.createElement('div')
     div.innerHTML = `<label>R2</label>
-                    <input value="0" type="number" placeholder="Datos en Ω" id="ResistenceParalale" autocomplete="off" required> <button class="btnDelete" id="deleteButton" onclick='deletes1(this)'> X </button>`
+                    <input value="0" type="number" placeholder="Datos en Ω" id="ResistenceParalele" autocomplete="off" required> <button class="btnDelete" id="deleteButton" onclick='deletes1(this)'> X </button>`
     divinputsParalele.appendChild(div)
     updateTotal();
 })
